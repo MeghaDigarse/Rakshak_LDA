@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import './profile.css'; // Import your CSS file
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import './profile.css'; 
+import { Link } from 'react-router-dom'; 
 
 function ProfilePage() {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
-    // Your API call logic here
   };
-
   return (
     <div className="profile-container">
       <div>
