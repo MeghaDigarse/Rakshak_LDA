@@ -1,5 +1,3 @@
-// LoginPage.js
-
 import React, { useState } from "react";
 import "./LoginPage.css"; // Import your CSS file
 import { useNavigate } from "react-router-dom";
