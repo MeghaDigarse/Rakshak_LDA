@@ -1,8 +1,6 @@
-// Results.js
-
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './Results.css'; // Import your CSS file
+import './Results.css'; 
 
 const Results = () => {
   const location = useLocation();
