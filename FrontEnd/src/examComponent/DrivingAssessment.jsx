@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom'; 
 import "./DriAss.css"
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import ProfilePage from './ProfilePage';
-// import DrivingAssessment from './DrivingAssessment';
-
-
 const DrivingAssessment = () => {
   const questions = [
     {
@@ -21,15 +15,11 @@ const DrivingAssessment = () => {
       options: ['Speed up', 'Stop', 'Proceed with caution', 'No left turn'],
       correctAnswer: 'Proceed with caution',
     },
-    // Add more questions as needed
   ];
 
   const [userAnswers, setUserAnswers] = useState({});
   const [score, setScore] = useState(0);
-  const navigate = useNavigate(); // Use useHistory instead of useNavigate
-
-  // const navigate = useNavigate(); // Use useNavigate instead of useHistory
-
+  const navigate = useNavigate();
   const handleAnswerSelection = (questionId, selectedOption) => {
     setUserAnswers((prevAnswers) => ({
       ...prevAnswers,
@@ -49,7 +39,7 @@ const DrivingAssessment = () => {
 
   const handleSubmit = () => {
     calculateScore();
-    navigate('/results', { state: { score, questions, userAnswers } }); // Use navigate instead of history.push
+    navigate('/results', { state: { score, questions, userAnswers } }); 
   };
 
   return (
